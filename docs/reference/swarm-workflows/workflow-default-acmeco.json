@@ -1,0 +1,20 @@
+{
+  "stages": [
+    {
+      "skill": "to-spec-acmeco",
+      "permission_mode": "acceptEdits"
+    },
+    {
+      "skill": "to-issues-acmeco",
+      "permission_mode": "acceptEdits"
+    },
+    {
+      "skill": "triage-acmeco",
+      "permission_mode": "acceptEdits"
+    },
+    {
+      "skill": "implement-acmeco",
+      "permission_mode": "acceptEdits"
+    }
+  ]
+}

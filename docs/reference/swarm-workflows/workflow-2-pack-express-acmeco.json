@@ -1,0 +1,13 @@
+{
+  "stages": [
+    {
+      "skill": "to-spec-acmeco",
+      "permission_mode": "acceptEdits"
+    },
+    {
+      "skill": "implement-acmeco",
+      "permission_mode": "acceptEdits",
+      "task": "Read and follow `.claude/skills/implement-acmeco/SKILL.md`. If no `ready-for-agent` issue exists for this work, create one slice under `docs/features/<slug>/issues/` from the Spec, set `Status: ready-for-agent`, then implement that slice only.\n\nWork-item:\n{description}"
+    }
+  ]
+}

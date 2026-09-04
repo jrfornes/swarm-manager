@@ -1,0 +1,29 @@
+{
+  "stages": [
+    {
+      "skill": "to-spec-acmeco",
+      "permission_mode": "acceptEdits"
+    },
+    {
+      "skill": "to-issues-acmeco",
+      "permission_mode": "acceptEdits"
+    },
+    {
+      "skill": "triage-acmeco",
+      "permission_mode": "acceptEdits"
+    },
+    {
+      "skill": "implement-acmeco",
+      "permission_mode": "acceptEdits",
+      "task": "Read and follow `.claude/skills/implement-acmeco/SKILL.md` except skip §3 Review.\n\nWork-item:\n{description}"
+    },
+    {
+      "skill": "code-review-acmeco",
+      "permission_mode": "plan"
+    },
+    {
+      "skill": "prepare-pr-acmeco",
+      "permission_mode": "acceptEdits"
+    }
+  ]
+}

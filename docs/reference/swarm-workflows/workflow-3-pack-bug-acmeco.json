@@ -1,0 +1,19 @@
+{
+  "stages": [
+    {
+      "skill": "to-issues-acmeco",
+      "permission_mode": "acceptEdits",
+      "task": "Read and follow `.claude/skills/to-issues-acmeco/SKILL.md` with these **pipeline overrides** (they win on conflict):\n\n1. **Input:** Parse a Jira issue key from the work-item (first `[A-Z][A-Z0-9]+-\\d+` token). Fetch the issue via Atlassian MCP when available (`getJiraIssue`); otherwise resolve per `docs/agents/issue-tracker.md`.\n2. **Issues-only:** Bug / minor delta under an existing capability. Do **not** create or update `SPEC.md` (see `to-spec-acmeco/references/spec-slug-resolution.md` § minor delta).\n3. **No human quiz:** Skip the skill step that quizzes the user on breakdown. Publish **one** vertical slice using your best judgment on capability slug and acceptance criteria.\n4. **Publish:** Create exactly one file `docs/features/<capability-slug>/issues/01-<short-slug>.md` with `Status: ready-for-agent`, `## What to build`, `## Acceptance criteria` (checkboxes), and `## Blocked by` set to `None: can start immediately`. Mention the Jira key in the body. Turn repro steps and expected/actual into verifiable AC; add a regression-test criterion when feasible.\n5. **Fail closed:** If the ticket lacks enough repro **and** expected/actual to write testable AC, write `docs/features/_intake/<KEY>.md` listing concrete gaps and **do not** create a `ready-for-agent` issue. State clearly that the pipeline must stop here.\n6. **Handoff:** End with the absolute path to the issue file you created.\n\nWork-item:\n{description}"
+    },
+    {
+      "skill": "implement-acmeco",
+      "permission_mode": "acceptEdits",
+      "task": "Read and follow `.claude/skills/implement-acmeco/SKILL.md` except skip §3 Review — the next stage runs code-review-acmeco.\n\nBind to the `ready-for-agent` issue under `docs/features/*/issues/` for this pipeline (match Jira key from work-item, or the `01-*.md` slice created in the prior stage in this worktree). If none exists, stop without implementing.\n\nWork-item:\n{description}"
+    },
+    {
+      "skill": "code-review-acmeco",
+      "permission_mode": "plan",
+      "task": "Read and follow `.claude/skills/code-review-acmeco/SKILL.md`. Fixed point: merge-base with default branch unless work-item says otherwise.\n\nWork-item:\n{description}"
+    }
+  ]
+}

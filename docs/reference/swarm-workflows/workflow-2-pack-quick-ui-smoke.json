@@ -1,0 +1,14 @@
+{
+  "stages": [
+    {
+      "skill": "implementer",
+      "permission_mode": "acceptEdits",
+      "task": "You are the implementer station. Read and follow `.claude/skills/implementer/SKILL.md` in this repository.\n\nWork-item:\n{description}"
+    },
+    {
+      "skill": "verifier",
+      "permission_mode": "acceptEdits",
+      "task": "You are the verifier station. Read and follow `.claude/skills/verifier/SKILL.md` in this repository. Post-fix Confirm for scenarios named in the work-item or all false scenarios.\n\nWork-item:\n{description}"
+    }
+  ]
+}

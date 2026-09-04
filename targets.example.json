@@ -1,0 +1,9 @@
+{
+  "default": "my-nx-app",
+  "targets": {
+    "my-nx-app": {
+      "repo": "/absolute/path/to/nx-monorepo",
+      "workflow": ".swarm/workflow.json"
+    }
+  }
+}

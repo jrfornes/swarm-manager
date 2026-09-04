@@ -1,0 +1,29 @@
+{
+  "stages": [
+    {
+      "skill": "spec-author",
+      "permission_mode": "acceptEdits"
+    },
+    {
+      "skill": "verifier",
+      "permission_mode": "acceptEdits"
+    },
+    {
+      "skill": "implementer",
+      "permission_mode": "acceptEdits"
+    },
+    {
+      "skill": "verifier",
+      "permission_mode": "acceptEdits"
+    },
+    {
+      "skill": "code-review-acmeco",
+      "permission_mode": "plan",
+      "task": "Read and follow `.claude/skills/code-review-acmeco/SKILL.md`.\n\nWork-item:\n{description}"
+    },
+    {
+      "skill": "publisher",
+      "permission_mode": "acceptEdits"
+    }
+  ]
+}

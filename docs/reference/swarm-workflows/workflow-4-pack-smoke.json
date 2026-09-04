@@ -1,0 +1,8 @@
+{
+  "stages": [
+    { "skill": "spec-author", "permission_mode": "acceptEdits" },
+    { "skill": "verifier", "permission_mode": "acceptEdits" },
+    { "skill": "implementer", "permission_mode": "acceptEdits" },
+    { "skill": "verifier", "permission_mode": "acceptEdits" }
+  ]
+}
